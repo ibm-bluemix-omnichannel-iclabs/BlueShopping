@@ -18,7 +18,7 @@
         <!--BlueShopping-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="BlueShopping" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlueShopping" id="BYZ-38-t0r" customClass="MainViewController" customModule="BlueShopping" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -36,31 +36,66 @@
                                     <constraint firstAttribute="height" constant="53" id="HOg-T6-gXi"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLV-C5-G60">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="initial.png" translatesAutoresizingMaskIntoConstraints="NO" id="smh-Qi-VPV">
+                                        <rect key="frame" x="137" y="263" width="101" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="101" id="QMa-u5-FEz"/>
+                                            <constraint firstAttribute="height" constant="99" id="Tbn-lu-guF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlueShopping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gV-ze-RGz">
+                                        <rect key="frame" x="122" y="370" width="131" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="131" id="hdl-Xj-gt3"/>
+                                            <constraint firstAttribute="height" constant="34" id="mQz-1c-csP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                        <color key="textColor" red="0.91372549020000005" green="0.1176470588" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="3gV-ze-RGz" firstAttribute="centerX" secondItem="smh-Qi-VPV" secondAttribute="centerX" id="NBE-uG-pl5"/>
+                                    <constraint firstItem="3gV-ze-RGz" firstAttribute="top" secondItem="smh-Qi-VPV" secondAttribute="bottom" constant="8" id="TS2-Sj-P5n"/>
+                                    <constraint firstItem="smh-Qi-VPV" firstAttribute="centerX" secondItem="vLV-C5-G60" secondAttribute="centerX" id="kPh-jJ-yoM"/>
+                                    <constraint firstItem="smh-Qi-VPV" firstAttribute="centerY" secondItem="vLV-C5-G60" secondAttribute="centerY" constant="-21" id="vJD-G8-d84"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.30980392156862746" green="0.76470588235294112" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vLV-C5-G60" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3hJ-Dn-AdV"/>
                             <constraint firstAttribute="trailing" secondItem="vVO-Cm-WF7" secondAttribute="trailing" id="Dvj-uT-Vdy"/>
                             <constraint firstItem="vVO-Cm-WF7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FTo-wO-svE"/>
                             <constraint firstItem="NLg-zc-MpP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HYJ-6r-d42"/>
                             <constraint firstItem="vVO-Cm-WF7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jd2-RN-kb5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NLg-zc-MpP" secondAttribute="bottom" id="KLL-BF-85J"/>
                             <constraint firstAttribute="trailing" secondItem="NLg-zc-MpP" secondAttribute="trailing" id="LNu-my-a2K"/>
+                            <constraint firstItem="vLV-C5-G60" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WJY-lu-z1Z"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vVO-Cm-WF7" secondAttribute="bottom" id="Y14-9X-Ue9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vLV-C5-G60" secondAttribute="bottom" id="fdy-OH-3Xo"/>
+                            <constraint firstAttribute="trailing" secondItem="vLV-C5-G60" secondAttribute="trailing" id="x5t-Jg-Qlg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BlueShopping" id="ExA-FH-WIH"/>
                     <connections>
+                        <outlet property="hiddenView" destination="vLV-C5-G60" id="w5e-nV-lu3"/>
                         <segue destination="kgA-tK-iMF" kind="show" identifier="ShowFeedBack" id="5JR-hR-vry"/>
+                        <segue destination="f9p-c2-hAy" kind="show" identifier="loginVCSS" id="VJf-MP-1NJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="-7"/>
+            <point key="canvasLocation" x="1469.5999999999999" y="-7.6461769115442282"/>
         </scene>
         <!--FeedbackViewController-->
         <scene sceneID="2Wn-9F-Xqr">
             <objects>
-                <viewController id="kgA-tK-iMF" userLabel="FeedbackViewController" customClass="FeedbackViewController" customModule="BlueShopping" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowFeedBack" id="kgA-tK-iMF" userLabel="FeedbackViewController" customClass="FeedbackViewController" customModule="BlueShopping" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lgN-sE-Pg9"/>
                         <viewControllerLayoutGuide type="bottom" id="UPP-iS-Dyb"/>
@@ -130,7 +165,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="203" id="amm-zq-0nx"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
                                 <dataDetectorType key="dataDetectorTypes" lookupSuggestion="YES"/>
@@ -179,7 +214,7 @@
                             <constraint firstItem="BA8-nT-9H8" firstAttribute="leading" secondItem="YRu-A8-wO0" secondAttribute="leadingMargin" id="w3O-oC-Mr6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="MXh-X6-qcK">
+                    <navigationItem key="navigationItem" title="Feeback" id="MXh-X6-qcK">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="TY6-oF-VWl">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -207,7 +242,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vwY-Kc-hiA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fx8-Io-hX4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fx8-Io-hX4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.30980392156862746" green="0.76470588235294112" blue="0.96862745098039216" alpha="0.92522698479729726" colorSpace="custom" customColorSpace="sRGB"/>
@@ -218,7 +253,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="f9p-c2-hAy" kind="relationship" relationship="rootViewController" id="mWZ-DM-bj1"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="txV-lI-OKE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c68-7j-c8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,7 +263,7 @@
         <!--Login View Controller-->
         <scene sceneID="zJT-SH-Ryj">
             <objects>
-                <viewController id="f9p-c2-hAy" customClass="LoginViewController" customModule="BlueShopping" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="f9p-c2-hAy" customClass="LoginViewController" customModule="BlueShopping" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ymn-GC-cuO"/>
                         <viewControllerLayoutGuide type="bottom" id="ph0-UR-70B"/>
@@ -356,12 +391,22 @@
                                         <color key="textColor" red="0.9137254901960784" green="0.11764705882352941" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="BBG-P5-sPn">
+                                        <rect key="frame" x="153" y="232" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="37" id="Iib-9c-eEA"/>
+                                            <constraint firstAttribute="height" constant="37" id="juf-o1-In7"/>
+                                        </constraints>
+                                        <color key="color" red="0.91372549020000005" green="0.1176470588" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="GRo-uS-5d0" firstAttribute="centerX" secondItem="JPl-QI-JbK" secondAttribute="centerX" id="4xB-by-jJf"/>
                                     <constraint firstItem="Sk0-KZ-JLd" firstAttribute="centerX" secondItem="GRo-uS-5d0" secondAttribute="centerX" id="M8H-M2-oAh"/>
+                                    <constraint firstItem="BBG-P5-sPn" firstAttribute="centerX" secondItem="Sk0-KZ-JLd" secondAttribute="centerX" id="OlP-qA-8kh"/>
                                     <constraint firstItem="Sk0-KZ-JLd" firstAttribute="top" secondItem="GRo-uS-5d0" secondAttribute="bottom" constant="8" id="akW-Z1-9fF"/>
+                                    <constraint firstItem="BBG-P5-sPn" firstAttribute="top" secondItem="Sk0-KZ-JLd" secondAttribute="bottom" constant="20" id="bwk-Sr-FH5"/>
                                     <constraint firstItem="GRo-uS-5d0" firstAttribute="centerY" secondItem="JPl-QI-JbK" secondAttribute="centerY" constant="-20.5" id="xZc-K5-bjU"/>
                                 </constraints>
                             </view>
@@ -382,16 +427,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="93n-VO-avW"/>
                     <connections>
+                        <outlet property="activitycontroller" destination="BBG-P5-sPn" id="rEl-PF-qEA"/>
                         <outlet property="containerView1" destination="JPl-QI-JbK" id="9Sa-QJ-bp0"/>
                         <outlet property="containerView2" destination="eqK-se-bLg" id="a1H-e9-TY9"/>
                         <outlet property="faceBookView" destination="FTa-NK-4rG" id="Vrb-ce-hGs"/>
                         <outlet property="googleView" destination="3he-SN-rkK" id="GKf-wY-ArY"/>
-                        <segue destination="BYZ-38-t0r" kind="show" action="showDetailViewController:sender:" id="uuC-sU-Bkh"/>
+                        <segue destination="DGX-6h-P7o" kind="unwind" identifier="unwind1" unwindAction="unwindToMainMenuWithSender:" id="mdT-UD-C2d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihN-ww-kVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DGX-6h-P7o" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1104.8" y="-835.23238380809596"/>
+            <point key="canvasLocation" x="1516" y="-783"/>
         </scene>
     </scenes>
     <resources>

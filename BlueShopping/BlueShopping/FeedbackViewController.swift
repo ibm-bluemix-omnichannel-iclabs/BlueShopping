@@ -251,6 +251,9 @@ class FeedbackViewController: UIViewController,FloatRatingViewDelegate, UIGestur
         // Add alert actions
         let cancelAction = NYAlertAction(title: "Cancel", style: .cancel) { (action) in
             self.dismiss(animated: true, completion: nil)
+            
+                self.navigationController?.popViewController(animated: true)
+
         }
 
         alertViewController.addAction(cancelAction)

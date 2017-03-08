@@ -14,32 +14,32 @@ import NotificationCenter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+
     var window: UIWindow?
     
-    //CONFIGURATION Values
+    // Cloudant Credentials
+    var cloudantName:String = "complaints"
+    var cloudantUserName:String = ""
+    var cloudantPassword:String = ""
+    var cloudantHostName:String = ""
     
-    //cloudant
-    var cloudantName:String = "Cloudant DB name"
-    var cloudantUserName:String = "Cloudant Username"
-    var cloudantPassword:String = "Cloudant password"
-    var cloudantHostName:String = "Your cloudant host name"
-    
-    //Whisk
-    var whiskKey:String = "OpenWhisk Key"
-    var whiskPass:String = "OpenWhisk password"
-    
-    //Push Service
-    var pushAppGUID:String = "push Service app GUID"
-    var pushAppClientSecret:String = "push Service client secret"
-    var pushAppRegion:String = "Push/AppID service region"
-    
-    //APPID
-    let appIdTenantId = "your APPID tenant Id"
+    // OpenWhisk Credentials
+    var whiskKey:String = ""
+    var whiskPass:String = ""
+
+    // Push Credentials
+    var pushAppGUID:String = ""
+    var pushAppClientSecret:String = ""
+    var pushAppRegion:String = ""
+
+    // APPID Credentials
+   let appIdTenantId = ""
     
     let notificationName = Notification.Name("sendFeedBack")
     var userName:String = UserDefaults.standard.value(forKey: "userName") != nil ?  UserDefaults.standard.value(forKey: "userName") as! String : "User"
-    
+
+    var appToken:AccessToken? = nil
+    var idToken:IdentityToken? = nil
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Initialize APPID
         let appid = AppID.sharedInstance
-        appid.initialize(tenantId: appIdTenantId, bluemixRegion: pushAppRegion)
+        appid.initialize(tenantId: appIdTenantId, bluemixRegion: ".stage1.ng.bluemix.net")
         let appIdAuthorizationManager = AppIDAuthorizationManager(appid:appid)
         bmsclient.authorizationManager = appIdAuthorizationManager
         
@@ -62,8 +62,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func registerForPush () {
+       
+        //Initialize core
+        let bmsclient = BMSClient.sharedInstance
+        bmsclient.initialize(bluemixRegion: pushAppRegion)
         
-        BMSPushClient.sharedInstance.initializeWithAppGUID(appGUID: pushAppGUID, clientSecret:pushAppClientSecret)
+       BMSPushClient.sharedInstance.initializeWithAppGUID(appGUID: pushAppGUID, clientSecret:pushAppClientSecret)
         
     }
     
@@ -78,6 +82,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print( "Response during device registration : \(response)")
                 
                 print( "status code during device registration : \(statusCode)")
+                NotificationCenter.default.post(name: self.notificationName, object: nil)
+
                 
             }
             else{
@@ -93,12 +99,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        
+       
         
         let payLoad = ((((userInfo as NSDictionary).value(forKey: "aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! String)
         
         self.showAlert(title: "Recieved Push notifications", message: payLoad)
-        NotificationCenter.default.post(name: notificationName, object: nil)
         
     }
     
@@ -114,7 +119,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // show the alert
         self.window!.rootViewController!.present(alert, animated: true, completion: nil)
     }
-    
-    
+
+
 }
 

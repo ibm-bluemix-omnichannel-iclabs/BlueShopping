@@ -45,12 +45,12 @@
 		149F82A71E6CA36900F9285E /* NYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYAlertView.m; sourceTree = "<group>"; };
 		149F82A81E6CA36900F9285E /* NYAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYAlertViewController.h; sourceTree = "<group>"; };
 		149F82A91E6CA36900F9285E /* NYAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYAlertViewController.m; sourceTree = "<group>"; };
-		14DE89111E6CAC3A003F0D99 /* fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fb.png; path = BlueShopping/fb.png; sourceTree = "<group>"; };
-		14DE89171E6CAEDF003F0D99 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = google.png; path = BlueShopping/google.png; sourceTree = "<group>"; };
-		14DE89191E6CB5F5003F0D99 /* initial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = initial.png; path = BlueShopping/initial.png; sourceTree = "<group>"; };
+		14DE89111E6CAC3A003F0D99 /* fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb.png; sourceTree = "<group>"; };
+		14DE89171E6CAEDF003F0D99 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
+		14DE89191E6CB5F5003F0D99 /* initial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = initial.png; sourceTree = "<group>"; };
 		14DE89211E6D817C003F0D99 /* BlueShopping.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlueShopping.entitlements; sourceTree = "<group>"; };
-		14DE89261E6DC4B8003F0D99 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = BlueShopping/facebook.png; sourceTree = "<group>"; };
-		14DE89271E6DC4B8003F0D99 /* google-plus-xxl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "google-plus-xxl.png"; path = "BlueShopping/google-plus-xxl.png"; sourceTree = "<group>"; };
+		14DE89261E6DC4B8003F0D99 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		14DE89271E6DC4B8003F0D99 /* google-plus-xxl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-plus-xxl.png"; sourceTree = "<group>"; };
 		14E6646E1E6BEB590061E146 /* BlueShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E664711E6BEB590061E146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14E664731E6BEB590061E146 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -61,8 +61,8 @@
 		14E664821E6BEB590061E146 /* BlueShoppingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueShoppingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E664861E6BEB590061E146 /* BlueShoppingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueShoppingTests.swift; sourceTree = "<group>"; };
 		14E664881E6BEB590061E146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14E664911E6BECF50061E146 /* scrren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scrren.png; path = BlueShopping/scrren.png; sourceTree = "<group>"; };
-		14E664931E6BEDA90061E146 /* tabscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabscreen.png; path = BlueShopping/tabscreen.png; sourceTree = "<group>"; };
+		14E664911E6BECF50061E146 /* scrren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrren.png; sourceTree = "<group>"; };
+		14E664931E6BEDA90061E146 /* tabscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabscreen.png; sourceTree = "<group>"; };
 		14E664951E6C25DD0061E146 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		14E664971E6C25F80061E146 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		14E6649A1E6C82790061E146 /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
