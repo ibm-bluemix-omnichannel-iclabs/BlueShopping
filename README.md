@@ -46,7 +46,7 @@ Complete the steps:
 
 ```
 
-6. To the updated new design document, add messages for each emotions - `Fear, Sadness, andDisgust, Anger and Joy` (Watson Tone Analyzer outputs). For example,
+6. To the updated new design document, add messages for each emotions - `Fear, Sadness, Disgust, Anger and Joy` (Watson Tone Analyzer outputs). For example,
 
 ```
 {
@@ -77,9 +77,10 @@ The `BlueShoping.swift` file need the following parameters to complete the actio
 
 1. Open the OPenWhisk Web Editor, and create `swift` action. Replace the content of the action with `BlueShoping.swift`
 2. Create a cloudant package binding usng the [Bluemix OpenWhisk CLI](https://new-console.ng.bluemix.net/openwhisk/cli).
-```
-wsk -v package bind /whisk.system/cloudant CloudantPackage -p username 'cloudantUsername' -p password 'cloudantPassword' -p host 'yourUserName.cloudant.com' -p dbname 'complaints'
-```
+  ```
+  wsk -v package bind /whisk.system/cloudant CloudantPackage -p username 'cloudantUsername' -p password 'cloudantPassword' 
+  -p host 'yourUserName.cloudant.com' -p dbname 'complaints'
+  ```
 3. Create a OpenWhisk `Trigger`.
 
 ```
