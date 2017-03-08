@@ -77,15 +77,17 @@ The `BlueShoping.swift` file need the following parameters to complete the actio
 
 1. Open the OPenWhisk Web Editor, and create `swift` action. Replace the content of the action with `BlueShoping.swift`
 2. Create a cloudant package binding usng the [Bluemix OpenWhisk CLI](https://new-console.ng.bluemix.net/openwhisk/cli).
-  ```
+
+```
   wsk -v package bind /whisk.system/cloudant CloudantPackage -p username 'cloudantUsername' -p password 'cloudantPassword' 
   -p host 'yourUserName.cloudant.com' -p dbname 'complaints'
-  ```
+```
 3. Create a OpenWhisk `Trigger`.
 
 ```
 wsk trigger create yourTriggerName --feed /yourNameSpace/CloudantPackage/changes -p includeDoc true 
 ```
+
 4. Go to openwhisk web editor again and create a rule to connect your action (step 1) and trigger (step 3)
 
 5. Open the BlueShopping app in `XCode.app`. Go to the `AppDelegate.swift` file and add values for ,
