@@ -86,7 +86,7 @@ The `BlueShoping.swift` file need the following parameters to complete the actio
 * Create a OpenWhisk `Trigger`.
 
 ```
-wsk trigger create yourTriggerName --feed /yourNameSpace/CloudantPackage/changes -p includeDoc true 
+wsk trigger create yourTriggerName --feed /yourNameSpace/CloudantPackage/changes
 ```
 
 * Go to openwhisk web editor again and create a rule to connect your action (step 1) and trigger (step 3)
