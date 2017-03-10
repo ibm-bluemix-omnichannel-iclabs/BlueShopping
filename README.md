@@ -89,7 +89,11 @@ The `BlueShoping.swift` file need the following parameters to complete the actio
 wsk trigger create yourTriggerName --feed /yourNameSpace/CloudantPackage/changes
 ```
 
-* Go to openwhisk web editor again and create a rule to connect your action (step 1) and trigger (step 3)
+* Create a rule to connect your action (step 1) and trigger (step 3)
+
+```
+wsk rule create myRule yourTriggerName yourActionName
+```
 
 * Open the BlueShopping app in `XCode.app`. Go to the `AppDelegate.swift` file and add values for ,
 
