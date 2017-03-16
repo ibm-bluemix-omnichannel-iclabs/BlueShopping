@@ -4,6 +4,8 @@ The SmartFollowup is an intuitive example usage of [Bluemix Push Notifications S
 
 The SmartFollowup app will register a feedback on the recently purchased items to the cloudant `complaints` database. The OpenWhisk will read changes in the `complaints` and will send data to Watson Tone Analyzer. The Tone Analyzer will send back the results to OpenWhisk. By analyzing the results, OpenWhisk will fetch appropriate message from Cloudant `moods` database and construct a valid message. This message gets pushed to `IBM Push Notifications service`, and is delivered to the mobile device.
 
+  <img src="Assets/arch.png" width="700" height="400">
+
 ##Requirements
 
 * iOS 10
@@ -143,3 +145,4 @@ Copyright 2017-2018 IBM Corporation
 Licensed under the [Apache License, Version 2.0 (the "License")](http://www.apache.org/licenses/LICENSE-2.0.html).
 
 Unless required by applicable law or agreed to in writing, software distributed under the license is distributed on an "as is" basis, without warranties or conditions of any kind, either express or implied. See the license for the specific language governing permissions and limitations under the license.
+`
