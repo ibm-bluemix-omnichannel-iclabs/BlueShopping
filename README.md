@@ -24,7 +24,7 @@ Complete the steps:
 
 2. Create an `Mobile Foundation` service.
 
-  <img src="Assets/foundation.png" width="300" height="120">
+   <img src="Assets/foundation.png" width="300" height="120">
 
 3. Click on [Catalog](https://console.ng.bluemix.net/catalog/) on the top bar. On the left pane click on `Watson` below `Services`.Create  a `Watson Tone Analyzer` Service.
 
